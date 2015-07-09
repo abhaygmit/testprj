@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-error_reporting(0);
+error_reporting(E_ALL);
 //date_default_timezone_set('America/Los_Angeles');
 date_default_timezone_set('Asia/Calcutta');
 

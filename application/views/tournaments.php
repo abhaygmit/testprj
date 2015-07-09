@@ -7,22 +7,34 @@ function viewPlayer(val)
 		$('#team1').css('display', 'block');
 		$('#team2').css('display', 'none');
 		$('#team3').css('display', 'none');
-		$('#stats').css('display', 'none');	
+		$('#stats').css('display', 'none');
+		$('#pointsTable').css('display', 'none');	
 	}
 	else if(val==2){
 		$('#team2').css('display', 'block');	
 		$('#team1').css('display', 'none');
 		$('#team3').css('display', 'none');
 		$('#stats').css('display', 'none');
+		$('#pointsTable').css('display', 'none');
 	}
 	else if(val==3){
 		$('#team3').css('display', 'block');
 		$('#team1').css('display', 'none');
 		$('#team2').css('display', 'none');	
 		$('#stats').css('display', 'none');
+		$('#pointsTable').css('display', 'none');
 	}
 	else if(val=='stats'){
 		$('#stats').css('display', 'block');
+		$('#team3').css('display', 'none');
+		$('#team1').css('display', 'none');
+		$('#team2').css('display', 'none');	
+		$('#pointsTable').css('display', 'none');
+	}
+	else if(val=='pointsTable'){
+
+		$('#pointsTable').css('display', 'block');
+		$('#stats').css('display', 'none');
 		$('#team3').css('display', 'none');
 		$('#team1').css('display', 'none');
 		$('#team2').css('display', 'none');	
@@ -45,7 +57,7 @@ function viewPlayer(val)
 			<a onclick="viewPlayer(<?php echo $team->id; ?>)" ><?php echo $team->team_name; ?></a></div><?php } ?>
 		
 		<div style="float:left; width:80px;"><a onclick="viewPlayer('stats')">Stats</a></div>
-		<div style="float:left; width:80px;"><a href="#pointsTable">Points Table</a></div>
+		<div style="float:left; width:80px;"><a onclick="viewPlayer('pointsTable')">Points Table</a></div>
 	</div>
      
      </div>
@@ -111,16 +123,11 @@ function viewPlayer(val)
                 
 	</div>
 
-	<?php if(count($stats) >0){ ?>
-             
+	             
        <?php
-	  $limit = @$_REQUEST['per_page'];
-		if($limit==''){
-                    $i=1;
-		}else{
-                    $i=$limit+1;
-		}
-            foreach($stats as $row){
+	 
+            $i=1;
+	    foreach($stats as $row){
 		
            ?>
             <div style="border:1px solid #009900; min-height: 40px; padding: 5px; ">
@@ -137,14 +144,7 @@ function viewPlayer(val)
 
 
 <?php $i++;}?>
-              <?php }else{
-            ?>
-              <tr>
-                <tr> <td colspan="6"> No Record Available.</td></tr>
-              </tr>
-              <?php
-            } // endif check result
-            ?>
+              
 	</div>
 
 
@@ -166,16 +166,12 @@ function viewPlayer(val)
                 
 	</div>
 
-	<?php if(count($bowlerStats) >0){ ?>
+	
              
        <?php
-	  $limit = @$_REQUEST['per_page'];
-		if($limit==''){
-                    $i=1;
-		}else{
-                    $i=$limit+1;
-		}
-            foreach($bowlerStats as $row){
+	  
+            $i=1;
+	    foreach($bowlerStats as $row){
 		
            ?>
             <div style="border:1px solid #009900; min-height: 40px; padding: 5px; ">
@@ -192,14 +188,7 @@ function viewPlayer(val)
 
 
 <?php $i++;}?>
-              <?php }else{
-            ?>
-              <tr>
-                <tr> <td colspan="6"> No Record Available.</td></tr>
-              </tr>
-              <?php
-            } // endif check result
-            ?>
+             
 
 
 
@@ -207,10 +196,111 @@ function viewPlayer(val)
 
 	</div>
 
-	<div id="pointsTable" style="width:80%; float:left; display:none;" >
-		<div></div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="pointsTable" style="display:none;" >
+		
+	<div style="width:40%; float:left; padding:5px">	
+		<div style="text-align:center; font-weight:bold; font-size:14px;">Points Table</div>	
+		<div style="border:1px solid #009900; min-height: 40px; padding: 5px; background-color:#ccc;">
+                <div class="left" style="width:7%;">No.</div>
+               
+                <div class="left" style="width:30%; ">Team Name</div>
+                <div style="width:25%" class="left">Match Played</div>
+                
+                <div class="left" style="width:15%">Wins</div>
+		<div class="left" style="width:10%">Lose</div>
+		<div class="left" style="width:12%">Points</div>
+		<div class="left" style="width:12%">NRR</div>
+                
 	</div>
 
+	             
+       <?php
+	 
+            $i=1;
+	    foreach($stats as $row){
+		
+           ?>
+            <div style="border:1px solid #009900; min-height: 40px; padding: 5px; ">
+                <div class="left" style="width:5%"><?php echo $i;?></div>
+               
+                <div class="left" style="width:30%"><?php echo ($row->player_name?displayText($row->player_name, 30):'N/A')?></div>
+                <div style="width:25%; text-align:center" class="left"><a id="expanderHead"><?php echo $row->match_played;?></a></div>
+                
+                <div class="left" style="width:15%;text-align:center"><?php echo $row->runs;?></div>
+		<div class="left" style="width:12%;text-align:center"><?php echo $row->sixes;?></div>
+		<div class="left" style="width:12%;text-align:center"><?php echo $row->fours;?></div>
+                
+	</div>
+
+
+<?php $i++;}?>
+              
+	</div>
+
+
+	
+
+
+
+		<div style="width:40%; float:left;padding:5px">	
+		<div style="text-align:center; font-weight:bold; font-size:14px;">Bowling Statistics</div>	
+		<div style="border:1px solid #009900; min-height: 40px; padding: 5px; background-color:#ccc;">
+                <div class="left" style="width:5%">No.</div>
+               
+                <div class="left" style="width:30%">Player Name</div>
+                <div style="width:25%" class="left">Match Played</div>
+                
+                <div class="left" style="width:12%">Overs</div>
+		<div class="left" style="width:15%">Runs</div>
+		<div class="left" style="width:10%">Wickets</div>
+                
+	</div>
+
+	
+             
+       <?php
+	  
+            $i=1;
+	    foreach($bowlerStats as $row){
+		
+           ?>
+            <div style="border:1px solid #009900; min-height: 40px; padding: 5px; ">
+                <div class="left" style="width:5%"><?php echo $i;?></div>
+               
+                <div class="left" style="width:30%"><?php echo ($row->player_name?displayText($row->player_name, 30):'N/A')?></div>
+                <div style="width:25%;text-align:center" class="left"><a id="expanderHead"><?php echo $row->match_played;?></a></div>
+                
+                <div class="left" style="width:10%;text-align:center"><?php echo $row->overs;?></div>
+		<div class="left" style="width:15%;text-align:center"><?php echo $row->runs_given;?></div>
+		<div class="left" style="width:10%;text-align:center"><?php echo $row->wickets;?></div>
+                
+	</div>
+
+
+<?php $i++;}?>
+             
+
+
+
+
+
+	</div>
 
 
 

@@ -1,0 +1,31 @@
+{
+    "header_name": "Normal Monday",
+    "header": {
+        "no_rooms": {
+            "1": "X-ray Room",
+            "2": "Consult Room",
+            "3": "Room3"
+        },
+        "no_chairs": {
+            "1": "Chair1",
+            "2": "Chair2",
+            "3": "Chair3"
+        },
+        "no_doctors": {
+            "1": "Doctor1",
+            "2": "Doctor2",
+            "3": "Doctor3"
+        },
+        "no_staff": {
+            "1": "Jane",
+            "2": "Simon",
+            "3": "Rankin"
+        }
+    },
+    "activeP": "50",
+    "time_slot": {
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "time_interval": "15"
+    }
+}

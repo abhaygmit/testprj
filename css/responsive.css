@@ -1,0 +1,333 @@
+/* Media Query */
+     /* Large desktop */
+    @media (min-width: 1200px) {
+.container {
+	width: 1000px;
+}
+}
+     /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 979px) {
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	padding: 0 !important;
+}
+.mainWrapper {
+	width: 100%;
+}
+.container {
+	width: 100%;
+}
+.container.whtBg {
+	margin: 0 auto;
+	width: 100%;
+	padding: 0;
+}
+.logoPane {
+	float: left;
+	width: 100%;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+.topNavRightCont {
+	float: left;
+	width: 100%;
+}
+.footer {
+	float: left;
+	width: 95%;
+	padding: 0 20px 0 20px;
+}
+.hlogin_label {
+	width: 90%;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.hlogin_inputs {
+	width: 100%;
+	float: left;
+}
+.Fbot {
+	width: 100%
+}
+
+/* 12 Sep 2013 */
+.iconmenus {width:745px; margin:auto; float:none;}
+.divideline.first {display:none;}
+.iconmenuwrap {width:80px !important;}
+a .name {text-align:center;}
+
+
+}
+     
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	padding: 0 !important;
+}
+.mainWrapper {
+	width: 100%;
+}
+.container {
+	width: 100%;
+}
+.footer {
+	padding: 0 10px 0 10px;
+}
+.logoPane {
+	float: left;
+	width: 100%;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+.topctrlBtn {
+	text-align: center;
+	padding: 0 0 10px 0;
+	width: 99%;
+}
+ul.topNav {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 4px 0 0 10px;
+	float: left;
+	display: none;
+}
+.mobTopNav {
+	display: block !important;
+	width: 100%;
+}
+.loginBtnCont {
+	margin-left: 45%;
+}
+.loginBtnPane {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	border-top: 1px solid #464646;
+	padding: 10px 0 0 0;
+}
+.topNavRightCont {
+	float: left;
+	padding: 8px 0 0 0;
+	width: 100%;
+}
+.forminwrap .fldLable {
+	width: 90%;
+	text-align: left;
+	padding-left: 5px;
+}
+.forminwrap .fldWrap {
+	width: 100%;
+	float: left;
+}
+.forminwrap {
+	padding: 0 10px;
+}
+#stepsForm ul li div.listTitle.selected label {
+	font-weight: bold !important;
+}
+.hloginwrap {
+	width:35%;
+	padding: 10px;
+	float: right;
+}
+.qawrap{
+	width:35%;
+	padding: 10px;
+	float: right;
+}
+.hlogin_label {
+	width: 90%;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.hlogin_inputs {
+	width: 100%;
+	float: left;
+}
+.Fbot {
+	width: 100%
+}
+
+/* 12 Sep 2013 */
+.iconmenus {width:100%; margin:auto; float:none;}
+.divideline.first {display:none;}
+.iconmenuwrap {width:80px !important; min-height:142px;}
+a .name {text-align:center;}
+.divideline.second {display:none;}
+.soswrap {width:96%; float:none; margin:auto;}
+.soswrap1 {width:96%; float:none; margin:auto;}
+.qawrap {width:92%; margin:10px auto 0; float:none;}
+.qawrap1 {width:92%; margin:10px auto 0; float:none;}
+
+}
+     
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	padding: 0 !important;
+}
+.mainWrapper {
+	width: 100%;
+}
+.container {
+	width: 100%;
+}
+.logoPane {
+	float: left;
+	width: 100%;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+.topctrlBtn {
+	text-align: center;
+	padding: 0 0 10px 0;
+	padding-left: 25%;
+}
+ul.topNav {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 4px 0 0 10px;
+	float: left;
+	display: none;
+}
+.mobTopNav {
+	display: block;
+	width: 100%;
+}
+.loginBtnCont {
+	margin-left: 41%;
+}
+.stp5_frmWrap {
+	width: 90%;
+}
+.hloginwrap {
+	width: 87%;
+	padding: 10px;
+	float: left;
+	margin: 10px;
+}.hlogin{ padding:5px 0px;}
+.hlogin_label {
+	width: 90%;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.hlogin_inputs {
+	width: 100%;
+	float: left;
+}
+.Fbot {
+	width: 100%
+}.fright{ clear:both; padding:2px 0 0 5px; float:left;}
+.display{display:none;}
+
+/* 12 Sep 2013 */
+
+
+
+}
+ @media only screen and (max-width: 480px) {
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	padding: 0 !important;
+}
+.mainWrapper {
+	width: 100%;
+}
+.container {
+	width: 100%;
+}
+.funcContainer {
+	float: left;
+	padding: 0 10px;
+	width: 93%;
+}
+.footer {
+	padding: 0 10px 0 10px;
+}
+.logoPane {
+	float: left;
+	width: 100%;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+ul.topNav {
+	display: none;
+}
+.mobTopNav {
+	display: block !important;
+	width: 100%;
+}
+.loginBtnCont {
+}
+.stp5_frmWrap {
+	width: 90%;
+}
+.hloginwrap {
+	width: 87%;
+	padding: 10px;
+	float: left;
+	margin: 10px;
+}
+.hlogin{ padding:5px 0px;}
+.hlogin_label {
+	width: 90%;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.hlogin_inputs {
+	width: 100%;
+	float: left;
+}
+.Fbot {
+	width: 100%
+}.fright{ clear:both; padding:2px 0 0 5px; float:left;}
+.display{display:none;}
+
+/* 12 Sep 2013 */
+.inconwrap {padding:10px 0;}
+
+/*-------30-09-2013-------------------*/
+.opAdminMn{ width:90%;}
+.left{ float:left;}
+.right{float:right;}
+.opAdminHm{width:100%;}
+
+/*-----------------------------------*/
+/*------------17-10-2013-----------*/
+.op_adminHeader {
+	float:left;
+	width:50%;
+}
+.op_adminHeader1 {
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	line-height: 18px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #d8d88d;
+	float:right;
+	width:50%;
+}
+/*--------------------------21-10-2013-----------------*/
+.hzScr{width:100%; margin:0px 5px; overflow-x:scroll;}
+.hzScW{width:770px; float:left;}
+.hzScr1{width:100%; margin:0px 5px; overflow-x:scroll;}
+.hzScW1{width:956px; float:left;} 
+.dsets{width:100%;}
